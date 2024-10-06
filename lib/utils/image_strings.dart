@@ -1,0 +1,14 @@
+const String driveLogo = 'assets/images/drive_logo.png';
+const String corruptedPCLogo = 'assets/images/corrupted_pc_logo.png';
+const String discoverLogo = 'assets/images/discover_logo.png';
+const String hddLogo = 'assets/images/hdd.png';
+const String imageLogo = 'assets/images/image_logo2.png';
+const String removableDiskLogo = 'assets/images/removable_disk_logo.png';
+const String ssdLogo = 'assets/images/ssd.png';
+const String toolLogo = 'assets/images/tool_logo.png';
+const String videoLogo = 'assets/images/video_logo.png';
+const String windowsDiskLogo = 'assets/images/windows_disk_logo.png';
+const String desktopLogo = 'assets/images/desktop_recovery_logo.png';
+const String folderLogo = 'assets/images/folder_recovery_logo.png';
+const String recycleBinLogo = 'assets/images/recycle_bin_recovery_logo.png';
+const String appLogo = 'assets/images/app_logo.png';
