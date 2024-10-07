@@ -37,8 +37,18 @@ class _CrashedPcState extends State<CrashedPc> {
         ),
         const DescriptionText(description: crashedPcDescription),
         const OutlinedContainer(
-            child: Row(
-          children: [],
+            child: Column(
+          children: [
+            Row(
+              children: [
+                SizedBox(
+                  width: 100,
+                  height: 100,
+                  child: Image.asset(),
+                )
+              ],
+            ),
+          ],
         ))
       ],
     );
