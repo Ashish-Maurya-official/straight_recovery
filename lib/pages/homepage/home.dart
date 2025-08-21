@@ -1,5 +1,8 @@
+import 'dart:isolate';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:straight_recovery/cpp/recoverJPG.dart';
 
 import '../../provider/provider.dart';
 import '../../utils/common_location_map.dart';
@@ -19,6 +22,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final receivePort = ReceivePort();
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -78,7 +83,21 @@ class _HomeState extends State<Home> {
                             diskLetter: partition.key,
                             totalSize: partition.value['totalSize'].toDouble(),
                             usedSpace: partition.value['usedSpace'].toDouble(),
-                            onPressed: () {},
+                            onPressed: () async {
+                              await Isolate.spawn(startRecovery, [
+                                receivePort.sendPort,
+                                '\\\\.\\${(partition.key).toString().substring(0, 2)}',
+                                'C:\\Users\\ashis\\Downloads\\images'
+                              ]);
+                              // startRecovery(receivePort.sendPort,'\\\\.\\${(partition.key).toString().substring(0,2)}','C:\\Users\\ashis\\Downloads\\images');
+                              // runRecovery('\\\\.\\${(partition.key).toString().substring(0,2)}
+                              // '
+                              // ,
+                              // '
+                              // C:\\Users\\ashis\\Downloads\\images
+                              // '
+                              // );
+                            },
                           );
                         }).toList(),
                       ),

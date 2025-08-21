@@ -10,7 +10,7 @@ extern "C" struct DiskInfo {
     char driveLetter[4];
     char diskType[12];
     char volumeName[MAX_PATH_LENGTH];
-    char fileSystem[MAX_PATH_LENGTH]; // Add a new field for the file system name
+    char fileSystem[MAX_PATH_LENGTH];
     ULARGE_INTEGER totalSize;
     ULARGE_INTEGER usedSpace;
     ULARGE_INTEGER freeSpace;

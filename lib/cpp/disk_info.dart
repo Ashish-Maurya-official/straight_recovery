@@ -39,7 +39,7 @@ final GetDiskInformation getDiskInformation =
         'getDiskInformation');
 
 // Function to get disk information as a Dart Map
-Map<String, Map<String, Map<String, dynamic>>> getDiskInfoAsMap() {
+ Map<String, Map<String, Map<String, dynamic>>>getDiskInfoAsMap() {
   final count = calloc<Int32>(); // Allocate memory for count
   final disksPointer = getDiskInformation(count); // Call the C function
 

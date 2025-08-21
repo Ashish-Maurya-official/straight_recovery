@@ -33,7 +33,8 @@ class Heading extends StatelessWidget {
               fontSize: size,
               fontWeight: FontWeight.w700,
             ),
-            overflow: TextOverflow.ellipsis),
+            overflow: TextOverflow.ellipsis,maxLines: 1,),
+
       ),
     );
   }

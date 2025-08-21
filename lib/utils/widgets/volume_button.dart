@@ -56,13 +56,14 @@ class VolumeButton extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Flexible(
-                      child: Text(
+                    SizedBox(
+                      width: 160,
+                    child:Text(
                         "$name($diskLetter)",
                         style: volumeNameTextStyle,
                         overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
+                      ),),
+
                     SizedBox(
                       width: 180,
                       height: 8,
